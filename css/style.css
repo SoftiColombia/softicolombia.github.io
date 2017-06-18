@@ -1,0 +1,26 @@
+/*
+Indice:
+
+1. Configuraciones Globales
+2. Header
+
+*/
+
+/* Configuraciones Globales */
+
+@font-face{
+    font-family: "Softi-Bolt";
+    src: url("../assets/font/SoftiBold.otf");
+}
+@font-face{
+    font-family: "Softi-Light";
+    src: url("../assets/font/SoftiLight.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: azure;
+}
+
