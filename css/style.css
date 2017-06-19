@@ -46,6 +46,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 nav{
     position: relative;
     height: 80px;
@@ -104,4 +105,57 @@ nav .logo-principal, nav .nav-content{
 .nav-content ul li a:hover{
     background-color: #fff;
     color: #000;
+}
+
+.partial-header{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.services{
+    width: 25%;
+    height: 35%;
+    text-align: center;
+}
+
+.services .header-services{
+    width: 100%;
+    height: 80%;
+}
+
+.services .header-services .img-services{
+    display: inline-block;
+    vertical-align: top;  
+    width: 32%;
+    height: 100%;
+}
+
+.img-services1, .img-services2, .img-services3{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.services .header-services .img-services.img-services1{
+    background-image: url("../assets/img/web.png");
+}
+.services .header-services .img-services.img-services2{
+    background-image: url("../assets/img/movil.png");
+}
+.services .header-services .img-services.img-services3{
+    background-image: url("../assets/img/soporte.png");
+}
+
+.services .legend-services{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 20%;
+    line-height: 40px;
+    color: #fff;
+    font-family: Softi-Bolt;
+    font-size: 20px;
 }
