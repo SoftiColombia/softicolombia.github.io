@@ -183,3 +183,34 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
 .button-scroll:hover{
     background-color: gainsboro; 
 }
+
+.sub-header{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10%;
+    padding: 1% 7%;
+    background-color: gainsboro;
+}
+
+.desarrollo-web1, .desarrollo-web2{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    margin-right: 5.5%;
+}
+
+.desarrollo-web1{
+    width: 9%;
+    height: 100%;
+}
+
+.desarrollo-web2{
+    width: 4%;
+    height: 100%;
+}
+
+.desarrollo-web1:last-child{
+    margin-right: 0;
+}
