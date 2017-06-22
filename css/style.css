@@ -6,7 +6,8 @@ Copyrigth Softi 2017
 ============================
 
 1. Configuraciones Globales
-2. Header/Nav
+2. Header/Nav/Subheader
+3. Sección
 
 ============================
 
@@ -37,6 +38,31 @@ html, body{
     height: 100%;
     max-height: 100%;
     font-family: Softi-Light;
+}
+
+.borde-difuminado{
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+}
+
+.text-separation-left{
+    padding-left: 7%;
+}
+
+.text-separation-right{
+    padding-right: 7%;
+}
+
+hr{
+    width: 85%;
+    margin: 0 auto;
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
 }
 
 /* 
@@ -213,4 +239,46 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
 
 .desarrollo-web1:last-child{
     margin-right: 0;
+}
+
+/*
+======================
+3. Sección
+======================
+*/
+
+.services-bussines{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 250px;
+    max-height: 300px;
+    overflow: hidden;
+    padding: 1% 7%;
+    margin: 4% 0;
+}
+
+.services-bussines .text-services-bussines, .services-bussines .img-services-bussines{
+    position: relative;
+    display: block;
+    height: 100%;
+    float: left;
+}
+
+.services-bussines .text-services-bussines{
+    width: 70%;
+}
+
+.services-bussines .img-services-bussines{
+    width: 30%;
+}
+
+.services-bussines .text-services-bussines h2{
+    color: #FF4B05;
+    font-family: Softi-Bolt;
+}
+
+.services-bussines .text-services-bussines p{
+    text-align: justify;
+    font-size: 20px;
 }
