@@ -89,27 +89,48 @@ hr{
     background-color: white;
     color: #FF4B05;
 }
+
+.orange{
+    background-color: #FF4B05;
+    color: #FFF;
+}
 /* 
 ========================
 2. Header/Nav 
 ========================
 */
 
-header{
+.header-big, .header-contacto{
     position: relative;
     display: table;
     width: 100%;
     height: 100vh;
+    
+}
+
+.header-big{
     background: url("../assets/img/desarrollo-web.jpg") no-repeat;
+    background-size: cover;
+}
+
+.header-contacto{
+    background: url("../assets/img/contacto.jpg") no-repeat;
     background-size: cover;
 }
 
 nav{
     position: relative;
-    height: 80px;
     width: 100%;
-    padding: 0 7%;
-    margin-top: 2%;
+    padding: 2% 7%;
+    position: relative;
+}
+
+.header-big nav, .header-contacto nav{
+    height: 130px;
+}
+
+.header-small nav{
+    height: 100px;
 }
 
 nav .logo-principal, nav .nav-content, .services .header-services .img-services{
@@ -134,12 +155,20 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
 .nav-content ul{
     position: relative;
     width: 100%;
-    height: 50%;
     margin: 0;
     padding: 0;
-    top: 25%;
     list-style: none;
     text-align: center;
+}
+
+.header-big nav .nav-content ul, .header-contacto nav .nav-content ul{
+    top: 25%;
+    height: 50%;
+}
+
+.header-small nav .nav-content ul{
+    top: 10%;
+    height: 80%;
 }
 
 .nav-content ul li{
@@ -148,6 +177,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
     float: left;
     color: #fff;
 }
+
 .nav-content ul li a{
     width: 100%;
     height: 100%;
@@ -159,9 +189,100 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
     transition: color 1s;
 }
 
-.nav-content ul li a:hover{
+.header-big nav .nav-content ul li a, .header-contacto nav .nav-content ul li a{
+    line-height: 40px;
+    color: #fff;
+}
+
+.header-small nav .nav-content ul li a{
+    line-height: 35px;
+    color: #000;
+}
+
+.header-big nav .nav-content ul li a:hover, .header-contacto nav .nav-content ul li a:hover{
     background-color: #fff;
     color: #000;
+}
+
+.header-small nav .nav-content ul li a:hover{
+    background-color: #FF4B05;
+    color: #000;
+}
+
+.data-contacto{
+    width: 50%;
+    height: 80%;
+    float: left;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 2% 5%;
+}
+
+.contacto{
+    width: 60%;
+    height: 40%;
+    padding: 5%;
+    -ms-transform: rotate(-2.5deg); /* IE 9 */
+    -webkit-transform: rotate(-2.5deg); /* Safari */
+    transform: rotate(-2.5deg);
+}
+
+.contacto h2, .form-contacto h2{
+    font-family: Softi-Bolt;
+    margin-bottom: 10px;
+    color: #FF4B05;
+}
+
+.contacto p{
+    color: #fff;
+}
+
+.contacto .redes-sociales{
+    width: 20%;
+    margin: 3% 1%;
+}
+
+.form-contacto{
+    width: 70%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.6);
+    padding: 5%;
+}
+
+.form-contacto input, select, textarea{
+    width: 100%;
+    padding: 5px;
+}
+
+.form-contacto input,select{
+    height: 25px;
+    margin-bottom: 8px;
+}
+
+.form-contacto textarea{
+    height: 100px;
+    resize: none;
+}
+
+.form-contacto label{
+    font-size: 12px;
+}
+
+.form-contacto button{
+    border: 0px;
+    display: block;
+    margin: 4% auto 0 auto;
+    border-style: double;
+}
+
+.form-contacto button:hover{
+    font-family: Softi-Bolt;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
 }
 
 .partial-header{
@@ -305,6 +426,10 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
 .services-bussines .text-services-bussines p{
     text-align: justify;
     font-size: 20px;
+}
+.services-bussines .text-services-bussines ul{
+    text-align: justify;
+    font-size: 17px;
 }
 
 /* 
