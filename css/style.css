@@ -94,6 +94,10 @@ hr{
     background-color: #FF4B05;
     color: #FFF;
 }
+
+.hide{
+    display: none;
+}
 /* 
 ========================
 2. Header/Nav 
@@ -432,6 +436,56 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
     font-size: 17px;
 }
 
+.portafolio{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 400px;
+    padding: 2% 7%;
+}
+
+.portafolio h2{
+    text-align: center;
+    font-family: Softi-Bolt;
+    color: #FF4B05
+}
+
+.portafolio p{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.portafolio .proyect{
+    position: relative;
+    display: table-cell;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32%;
+    height: 70%;
+    float: left;
+    margin: 5px;
+}
+
+.portafolio .proyect img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.portafolio .proyect:hover img{
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.portafolio .proyect .button-proyect{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    border: none;
+    z-index: 100;
+}
 /* 
 ========================
 4. Footer

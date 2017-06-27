@@ -23,6 +23,10 @@ $(document).ready(function () {
     $(".button-contacto").click(function(){
         window.location.href = "contacto.html";
     });
+    
+    $(".proyect").hover(function(e){
+        console.log(e.valueOf);
+    });
 });
 
 function moveScroll($top_scroll, $seg) {
