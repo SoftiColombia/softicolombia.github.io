@@ -26,6 +26,25 @@ Copyrigth Softi 2017
     src: url("../assets/fonts/SoftiLight.otf");
 }
 
+::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 3px !important;
+    background-color: #e8e8e7;
+}
+::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 3px !important;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 3px !important;
+    background-color: dimgrey;
+    background-image: -webkit-linear-gradient(90deg,transparent, rgba(0, 0, 0, 0.3) 50%, transparent, transparent)
+}
+::-webkit-scrollbar-corner {
+      background-color: black;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -485,6 +504,103 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
     height: 10%;
     border: none;
     z-index: 100;
+}
+
+.mostrar-portafolio{
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7) !important;
+    padding: 20px;
+    z-index: 100;
+    overflow: auto !important;
+}
+.data-portafolio{
+    width: 40%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.8);
+    margin: 0 auto;
+    overflow:auto;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.data-portafolio img{
+    background-image: cover;
+}
+
+.img1-proyecto,.img2-proyecto,.img3-proyecto, .data-proyecto{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.img1-proyecto{
+    height: 300px;
+}
+.img2-proyecto, .img3-proyecto{
+    height: 600px;
+}
+.data-proyecto{
+    position: relative;
+    display: flex;
+    min-height: 150px;
+    overflow: auto;
+    align-items: center;
+    padding: 3%;
+}
+
+.titulo-proyecto,.desc-proyecto{
+    position: relative;
+    display: block;
+    height: 100%;
+    float: left;
+}
+
+.titulo-proyecto{
+    width: 40%;
+    display: block;
+    position: relative;
+}
+
+.titulo-proyecto h3{
+    color: #FF4B05;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Softi-Bolt;
+}
+
+.titulo-proyecto p{
+    text-align: center;
+    font-size: 12px;
+}
+
+.desc-proyecto{
+    width: 60%;
+    border-left: 2px dotted gray;
+    padding-left: 3%;
+}
+
+.desc-proyecto p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+.desc-proyecto h4{
+    font-family: Softi-Bolt;
+    color: #FF4B05;
+    margin: 4% 0 2% 0;
+}
+
+.desc-proyecto ul{
+    padding-left: 5%;
+}
+
+.desc-proyecto ul li{
+    list-style: circle;
 }
 /* 
 ========================
