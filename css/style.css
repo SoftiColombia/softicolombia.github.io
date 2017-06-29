@@ -198,7 +198,6 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
     width: 25%;
     height: 100%;
     float: left;
-    color: #fff;
 }
 
 .nav-content ul li a{
@@ -208,13 +207,12 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
     line-height: 40px;
     text-decoration: none;
     font-family: Softi-Bolt;
-    transition: background-color 1s !important;
     transition: color 1s;
 }
 
 .header-big nav .nav-content ul li a, .header-contacto nav .nav-content ul li a{
     line-height: 40px;
-    color: #fff;
+    color: #FFF;
 }
 
 .header-small nav .nav-content ul li a{
@@ -222,14 +220,23 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
     color: #000;
 }
 
-.header-big nav .nav-content ul li a:hover, .header-contacto nav .nav-content ul li a:hover{
-    background-color: #fff;
-    color: #000;
+.header-big nav .nav-content ul li a:hover, .header-contacto nav .nav-content ul li a:hover, .header-small nav .nav-content ul li a:hover{
+    color: #FF4B05;
 }
 
-.header-small nav .nav-content ul li a:hover{
-    background-color: #FF4B05;
-    color: #000;
+.line-menu{
+	width: 0%;
+	height: 2px;
+	background-color: #f25100;
+	transition: width 0.5s linear;
+}
+
+.header-big nav .nav-content ul li:hover .line-menu, .header-contacto nav .nav-content ul li:hover .line-menu{
+    width: 100%;
+}
+
+.header-small nav .nav-content ul li:hover .line-menu{
+    width: 100%;
 }
 
 .data-contacto{

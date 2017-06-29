@@ -42,6 +42,9 @@ $(document).ready(function () {
         var val = $(this).data("id");
         $(".mostrar-portafolio").removeClass("hide");
 		$("body").css("overflow-y", "hidden");
+        $('.data-portafolio').animate({
+            scrollTop: 0
+        }, 1);
 		
 		$(".img1-proyecto").attr('src','assets/img/proyecto'+val+'.png');
 		$(".img2-proyecto").attr('src','assets/img/proyecto'+val+'.1.png');
