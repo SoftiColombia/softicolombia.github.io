@@ -9,11 +9,11 @@ Copyrigth Softi 2017
 2. Header/Nav/Subheader
 3. Sección
 4. Footer
-
+5. Media Query Mobile
 ============================
 
 ===========================
-1. Configuraciones Globales 
+1. Configuraciones Globales
 ===========================
 */
 
@@ -83,12 +83,12 @@ body{
 hr{
     width: 85%;
     margin: 0 auto;
-    border: 0; 
-    height: 1px; 
+    border: 0;
+    height: 1px;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
 .icon{
@@ -117,9 +117,9 @@ hr{
 .hide{
     display: none;
 }
-/* 
+/*
 ========================
-2. Header/Nav 
+2. Header/Nav
 ========================
 */
 
@@ -128,7 +128,7 @@ hr{
     display: table;
     width: 100%;
     height: 100vh;
-    
+
 }
 
 .header-big{
@@ -145,7 +145,6 @@ nav{
     position: relative;
     width: 100%;
     padding: 2% 7%;
-    position: relative;
 }
 
 .header-big nav, .header-contacto nav{
@@ -156,14 +155,13 @@ nav{
     height: 100px;
 }
 
-nav .logo-principal, nav .nav-content, .services .header-services .img-services{
+nav .logo-principal, nav .nav-content, .services .header-services .img-services, .button-menu{
     vertical-align: top;
     display: inline-block;
 }
 
 .logo-principal{
     position: relative;
-    display: block;
     height: 100%;
     background-size: 100% 100%;
 }
@@ -382,7 +380,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
 }
 
 .button-scroll:hover{
-    background-color: gainsboro; 
+    background-color: gainsboro;
 }
 
 .sub-header{
@@ -609,7 +607,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services{
 .desc-proyecto ul li{
     list-style: circle;
 }
-/* 
+/*
 ========================
 4. Footer
 ========================
@@ -653,3 +651,66 @@ footer .partial-footer .redes-sociales{
 footer .partial-footer .logo-footer{
     width: 30%;
 }
+
+/*
+===============================
+5. MEDIA-QUERY MOBILE
+===============================
+*/
+
+.button-menu{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: url("../assets/img/icon-menu.png") #171d3a no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    border: none;
+    border-radius: 3px;
+    float: right;
+    margin: 2%;
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .header-big, .header-contacto{
+        height: 40vh;
+    }
+
+    nav{
+        padding: 2%;
+    }
+
+    .header-big nav, .header-contacto nav{
+        height: 80px;
+    }
+
+    nav .nav-content{
+        display: none;
+    }
+
+    .button-menu{
+        display: block;
+    }
+    .partial-header{
+        height: 60%;
+    }
+    
+    .services{
+        width: 50%;
+        height: 50%;
+    }
+    .services .header-services{
+        width: 100%;
+        height: 80%;
+    }
+    .services .header-services .img-services{
+        width: 30%;
+    }
+    .services .legend-services{
+        line-height: 18px;
+        font-size: 12px;
+    }
+    .button-scroll{
+        display: none;
+    }
