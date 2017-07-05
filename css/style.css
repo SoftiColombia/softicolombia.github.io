@@ -66,6 +66,11 @@ body{
     background-size: cover;
 }
 
+.content{
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+}
+
 .borde-difuminado{
     -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
@@ -173,7 +178,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     float: right;
 }
 
-.nav-content ul{
+.nav-content ul, .nav-small ul{
     position: relative;
     width: 100%;
     margin: 0;
@@ -198,7 +203,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     float: left;
 }
 
-.nav-content ul li a{
+.nav-content ul li a, .nav-small ul li a{
     width: 100%;
     height: 100%;
     display: block;
@@ -239,23 +244,25 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 
 .data-contacto{
     width: 50%;
-    height: 80%;
+    min-height: 80%;
     float: left;
     position: relative;
     display: -webkit-flex;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    padding: 2% 5%;
+    padding: 0% 5%;
 }
 
 .contacto{
+    position: relative;
     width: 60%;
     height: 40%;
-    padding: 5%;
+    padding: 15px;
     -ms-transform: rotate(-2.5deg); /* IE 9 */
     -webkit-transform: rotate(-2.5deg); /* Safari */
     transform: rotate(-2.5deg);
+    margin: 20px 0
 }
 
 .contacto h2, .form-contacto h2{
@@ -277,16 +284,16 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     width: 70%;
     height: 100%;
     background-color: rgba(255,255,255, 0.6);
-    padding: 5%;
+    padding: 20px;
 }
 
 .form-contacto input, select, textarea{
     width: 100%;
     padding: 5px;
+    -moz-padding = 5px;
 }
 
 .form-contacto input,select{
-    height: 25px;
     margin-bottom: 8px;
 }
 
@@ -314,7 +321,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 }
 
 .partial-header{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 70%;
     display: -webkit-flex;
@@ -366,12 +373,13 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 }
 
 .button-scroll{
+    position: absolute;
+    display: block;
     width: 4%;
     height: 8%;
-    position: relative;
-    display: block;
-    float: right;
-    margin-right: 2%;
+    bottom: 0;
+    right: 0;
+    margin: 2%;
     border-radius: 3px;
     border-style: none;
     background: white url("../assets/img/scroll-button.png");
@@ -402,18 +410,15 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 
 .desarrollo-web1{
     width: 9%;
-    height: 100%;
 }
 
 .desarrollo-web2{
     width: 4%;
-    height: 100%;
 }
 
 .desarrollo-web1:last-child{
     margin-right: 0;
 }
-
 /*
 ======================
 3. Sección
@@ -424,8 +429,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     position: relative;
     display: block;
     width: 100%;
-    height: 250px;
-    max-height: 300px;
+    min-height: 250px;
     overflow: hidden;
     padding: 1% 7%;
     margin: 4% 0;
@@ -459,37 +463,34 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     text-align: justify;
     font-size: 17px;
 }
+.services-bussines .text-services-bussines ul li{
+    margin: 1% 0;
+}
 
 .portafolio{
     position: relative;
-    display: block;
     width: 100%;
     height: 400px;
     padding: 2% 7%;
+    text-align: center;
 }
 
 .portafolio h2{
-    text-align: center;
     font-family: Softi-Bolt;
     color: #FF4B05
 }
 
 .portafolio p{
-    text-align: center;
     margin-bottom: 2%;
 }
 
 .portafolio .proyect{
     position: relative;
-    display: table-cell;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32%;
+    width: 31%;
     height: 70%;
-    float: left;
-    margin: 5px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1% auto;
 }
 
 .portafolio .proyect img{
@@ -509,6 +510,9 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     height: 10%;
     border: none;
     z-index: 100;
+    top: 45%;
+    left: 35%;
+    margin: 0 auto;
 }
 
 .mostrar-portafolio{
@@ -522,10 +526,21 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     z-index: 100;
     overflow: auto !important;
 }
+
+.close-mostrar-portafolio{
+    position: absolute;
+    z-index: 3000;
+    width: 30px;
+    height: 30px;
+    background: url("../assets/img/icon-close.png") no-repeat;
+    background-size: cover;
+    margin: 1%;
+    border: none;
+    display: none;
+}
 .data-portafolio{
     width: 40%;
     height: 100%;
-    background-color: rgba(255,255,255,0.8);
     margin: 0 auto;
     overflow:auto;
     z-index: 1000;
@@ -540,7 +555,18 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     position: relative;
     display: block;
     width: 100%;
-    margin: 0 !important;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.img1-proyecto{
+    margin-bottom: 2%;
+}
+.img3-proyecto{
+    margin-top: 2%;
+}
+
+.data-proyecto, .img2-proyecto{
+  margin: 2% 0;
 }
 
 .img1-proyecto{
@@ -614,6 +640,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 */
 
 footer{
+    position: relative;
     width: 100%;
     height: 180px;
     background-image: url(../assets/img/footer.png);
@@ -623,9 +650,11 @@ footer{
 }
 
 footer .partial-footer{
+    position: relative;
     width: 33%;
     height: 100%;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     text-align: center;
 }
 
@@ -652,29 +681,98 @@ footer .partial-footer .logo-footer{
     width: 30%;
 }
 
+/* Nav Mobile - Tablets*/
+.button-menu{
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    background: url("../assets/img/icon-menu.png") no-repeat;
+    background-size: 100%;
+    -moz-outline: none;
+         outline: none;
+    border: none;
+    margin: 25px;
+    z-index: 1000;
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+}
+
+.servicios .button-menu{
+    background: url("../assets/img/icon-menu2.png") no-repeat;
+    background-size: 100%;
+}
+
+body.nav-open .button-menu, body.nav-open.servicios .button-menu{
+    position: fixed !important;
+    margin: 20px 0;
+    width: 40px;
+    height: 40px;
+    background-color: #171D3A;
+    background-size: 75%;
+    background-position: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+body.nav-open.servicios .button-menu{
+    background: url("../assets/img/icon-menu.png") #171D3A no-repeat;
+    background-size: 75%;
+    background-position: center;
+}
+
+body.nav-open .content, body.nav-open .button-menu{
+    -webkit-transform: translate3D(-240px, 0, 0);
+        -ms-transform: translate3D(-240px, 0, 0);
+            transform: translate3D(-240px, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+}
+
+.nav-small{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    background: #171D3A;
+    z-index = 100000;
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+    -webkit-transform: translate3D(240px, 0, 0);
+        -ms-transform: translate3D(240px, 0, 0);
+            transform: translate3D(240px, 0, 0);
+}
+
+.nav-small ul li{
+    height: 40px;
+}
+
+.nav-small ul li a{
+    color: #FFF;
+}
+
+body.nav-open .nav-small{
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+    -webkit-transform: translate3D(0, 0, 0);
+        -ms-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+}
 /*
 ===============================
 5. MEDIA-QUERY MOBILE
 ===============================
 */
-
-.button-menu{
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background: url("../assets/img/icon-menu.png") #171d3a no-repeat;
-    background-size: 80% 80%;
-    background-position: center;
-    border: none;
-    border-radius: 3px;
-    float: right;
-    margin: 2%;
-    display: none;
-}
-
 @media only screen and (max-width: 500px) {
     .header-big, .header-contacto{
         height: 40vh;
+    }
+
+    .header-small nav{
+        height: 80px;
     }
 
     nav{
@@ -695,7 +793,7 @@ footer .partial-footer .logo-footer{
     .partial-header{
         height: 60%;
     }
-    
+
     .services{
         width: 50%;
         height: 50%;
@@ -713,4 +811,167 @@ footer .partial-footer .logo-footer{
     }
     .button-scroll{
         display: none;
+    }
+
+    .sub-header{
+        height: 40px;
+        padding: 2%;
+    }
+
+    .desarrollo-web1, .desarrollo-web2{
+        overflow: hidden;
+        margin-right: 0;
+    }
+
+    .desarrollo-web1{
+        width: 15%;
+    }
+    .desarrollo-web2{
+        width: 5%;
+    }
+
+    .data-contacto{
+        width: 100%;
+        min-height: 20%;
+        padding: 2%;
+    }
+
+    .contacto{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255, 0.6);
+        -ms-transform: none; /* IE 9 */
+        -webkit-transform: none; /* Safari */
+        transform: none;
+    }
+
+    .contacto p{
+        color: #000;
+    }
+
+    .contacto .redes-sociales{
+        width: 23%;
+        margin: 3% 0% 0 0%;
+    }
+
+    .form-contacto{
+        width: 100%;
+    }
+
+    .services-bussines{
+        padding: 0 2%;
+        min-height: 250px;
+        margin: 2% 0;
+    }
+
+    .services-bussines .text-services-bussines, .services-bussines .img-services-bussines{
+        float: none;
+    }
+
+    .services-bussines .img-services-bussines{
+        width: 150px;
+        height: 120px;
+        margin: 0% auto;
+    }
+
+    .services-bussines .text-services-bussines{
+        width: 100%;
+        height: 55%;
+        margin: 2% 0;
+    }
+
+    .services-bussines .text-services-bussines h2{
+        font-size: 15px;
+    }
+
+    .services-bussines .text-services-bussines p{
+        font-size: 13px;
+    }
+
+    .services-bussines .text-services-bussines ul{
+        font-size: 12px;
+        margin-left: 3%;
+    }
+
+    .text-separation-left{
+        padding-left: 0%;
+    }
+
+    .text-separation-right{
+        padding-right: 0%;
+    }
+
+    .portafolio{
+        height: 400px;
+        padding: 2%;
+    }
+
+    .portafolio .proyect{
+        width: 48%;
+        height: 40%;
+    }
+
+    .portafolio .proyect .button-proyect{
+        width: 60%;
+        height: 20%;
+        border: none;
+        z-index: 100;
+        top: 40%;
+        left: 20%;
+        margin: 0 auto;
+    }
+
+    .data-portafolio{
+        width: 100%;
+    }
+
+    .close-mostrar-portafolio{
+        display: block;
+    }
+
+    .desc-proyecto p{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .desc-proyecto ul{
+        font-size: 14px;
+        padding-left: 10%;
+    }
+
+    footer{
+        height: 330px;
+        padding: 2%;
+    }
+
+    footer .partial-footer{
+      width: 100%;
+    }
+
+    footer .partial-footer:first-child{
+        height: 42%;
+    }
+
+    footer .partial-footer{
+        height: 23%;
+    }
+    footer .partial-footer:last-child{
+        height: 35%;
+    }
+
+    footer .partial-footer h3{
+        margin-bottom: 0px;
+    }
+
+    footer .partial-footer p{
+        font-size: 15px;
+    }
+
+    footer .partial-footer .redes-sociales{
+        width: 10%;
+        height: 50%;
+    }
+
+    footer .partial-footer .logo-footer{
+        width: 20%;
     }
