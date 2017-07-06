@@ -6,10 +6,20 @@ Copyrigth Softi 2017
 ============================
 
 1. Configuraciones Globales
-2. Header/Nav/Subheader
-3. Sección
+2. Header:
+    - Nav.
+    - Icons Services Softi.
+    - Button Move Scroll.
+    - Herramientas de Desarrollo.
+3. Sección:
+    - Servicios.
+    - Portafolio
 4. Footer
-5. Media Query Mobile
+5. Media-Query:
+    - Config global smartphones
+    - Mobile Portrait & Landscape
+    - Mobile Portrait
+    - Mobile Landscape
 ============================
 
 ===========================
@@ -124,7 +134,7 @@ hr{
 }
 /*
 ========================
-2. Header/Nav
+2. Header
 ========================
 */
 
@@ -146,6 +156,7 @@ hr{
     background-size: cover;
 }
 
+/* Nav */
 nav{
     position: relative;
     width: 100%;
@@ -242,6 +253,8 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     width: 100%;
 }
 
+/* Contacto */
+
 .data-contacto{
     width: 50%;
     min-height: 80%;
@@ -320,6 +333,8 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
 }
 
+/* Icons Services Softi */
+
 .partial-header{
     position: absolute;
     width: 100%;
@@ -372,6 +387,8 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     font-size: 20px;
 }
 
+/* Button move scroll*/
+
 .button-scroll{
     position: absolute;
     display: block;
@@ -390,6 +407,8 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 .button-scroll:hover{
     background-color: gainsboro;
 }
+
+/* Herramientas de desarrollo */
 
 .sub-header{
     position: relative;
@@ -423,7 +442,8 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 ======================
 3. Sección
 ======================
-*/
+
+- Servicios */
 
 .services-bussines{
     position: relative;
@@ -467,6 +487,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     margin: 1% 0;
 }
 
+/* - Portafolio */
 .portafolio{
     position: relative;
     width: 100%;
@@ -647,8 +668,8 @@ footer{
     background-size: cover;
     padding: 2% 7%;
     color: #fff;
+    text-align: center;
 }
-
 footer .partial-footer{
     position: relative;
     width: 33%;
@@ -657,18 +678,14 @@ footer .partial-footer{
     vertical-align: top;
     text-align: center;
 }
-
-
 footer .partial-footer h3{
     font-family: Softi-Bolt;
     text-align: center;
     margin-bottom: 15px;
 }
-
 footer .partial-footer p{
     font-size: 18px;
 }
-
 footer .partial-footer .redes-sociales{
     width: 20%;
     height: 60%;
@@ -676,12 +693,11 @@ footer .partial-footer .redes-sociales{
     vertical-align: top;
     margin: 2%;
 }
-
 footer .partial-footer .logo-footer{
     width: 30%;
 }
 
-/* Nav Mobile - Tablets*/
+/* Nav - Smarphones*/
 .button-menu{
     position: absolute;
     display: none;
@@ -699,12 +715,25 @@ footer .partial-footer .logo-footer{
     -webkit-transition: -webkit-transform 0.3s ease;
             transition: transform 0.3s ease;
 }
-
 .servicios .button-menu{
     background: url("../assets/img/icon-menu2.png") no-repeat;
     background-size: 100%;
 }
-
+.nav-small{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #171D3A;
+    -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+}
+.nav-small ul li{
+    height: 40px;
+}
+.nav-small ul li a{
+    color: #FFF;
+}
 body.nav-open .button-menu, body.nav-open.servicios .button-menu{
     position: fixed !important;
     margin: 20px 0;
@@ -716,44 +745,15 @@ body.nav-open .button-menu, body.nav-open.servicios .button-menu{
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
-
 body.nav-open.servicios .button-menu{
     background: url("../assets/img/icon-menu.png") #171D3A no-repeat;
     background-size: 75%;
     background-position: center;
 }
-
 body.nav-open .content, body.nav-open .button-menu{
-    -webkit-transform: translate3D(-240px, 0, 0);
-        -ms-transform: translate3D(-240px, 0, 0);
-            transform: translate3D(-240px, 0, 0);
     -webkit-transition: -webkit-transform 0.3s ease;
             transition: transform 0.3s ease;
 }
-
-.nav-small{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 240px;
-    background: #171D3A;
-    z-index = 100000;
-    -webkit-transition: -webkit-transform 0.3s ease;
-            transition: transform 0.3s ease;
-    -webkit-transform: translate3D(240px, 0, 0);
-        -ms-transform: translate3D(240px, 0, 0);
-            transform: translate3D(240px, 0, 0);
-}
-
-.nav-small ul li{
-    height: 40px;
-}
-
-.nav-small ul li a{
-    color: #FFF;
-}
-
 body.nav-open .nav-small{
     -webkit-transition: -webkit-transform 0.3s ease;
             transition: transform 0.3s ease;
@@ -765,24 +765,9 @@ body.nav-open .nav-small{
 ===============================
 5. MEDIA-QUERY MOBILE
 ===============================
-*/
-@media only screen and (max-width: 500px) {
-    .header-big, .header-contacto{
-        height: 40vh;
-    }
 
-    .header-small nav{
-        height: 80px;
-    }
-
-    nav{
-        padding: 2%;
-    }
-
-    .header-big nav, .header-contacto nav{
-        height: 80px;
-    }
-
+Config global smartphones */
+@media only screen and (max-width: 1023px) {
     nav .nav-content{
         display: none;
     }
@@ -790,13 +775,34 @@ body.nav-open .nav-small{
     .button-menu{
         display: block;
     }
-    .partial-header{
-        height: 60%;
+    nav{
+        padding: 2%;
+    }
+}
+
+/* Mobile Portrait & Landscape */
+@media only screen and (max-width: 767px) and (min-width: 320px){
+    /* Headers */
+    .header-big nav, .header-contacto nav, .header-small nav{
+        height: 80px;
     }
 
-    .services{
-        width: 50%;
-        height: 50%;
+    /* Nav */
+    .nav-small{
+        width: 240px;
+        -webkit-transform: translate3D(240px, 0, 0);
+            -ms-transform: translate3D(240px, 0, 0);
+                transform: translate3D(240px, 0, 0);
+    }
+    body.nav-open .content, body.nav-open .button-menu{
+        -webkit-transform: translate3D(-240px, 0, 0);
+            -ms-transform: translate3D(-240px, 0, 0);
+                transform: translate3D(-240px, 0, 0);
+    }
+
+    /* Icons Services Softi */
+    .partial-header{
+        height: 60%;
     }
     .services .header-services{
         width: 100%;
@@ -805,112 +811,24 @@ body.nav-open .nav-small{
     .services .header-services .img-services{
         width: 30%;
     }
-    .services .legend-services{
-        line-height: 18px;
-        font-size: 12px;
-    }
+
+    /* Button Scroll */
     .button-scroll{
         display: none;
     }
 
-    .sub-header{
-        height: 40px;
-        padding: 2%;
-    }
-
-    .desarrollo-web1, .desarrollo-web2{
-        overflow: hidden;
-        margin-right: 0;
-    }
-
-    .desarrollo-web1{
-        width: 15%;
-    }
+    /* Herramientas de desarrollo */
     .desarrollo-web2{
         width: 5%;
     }
 
-    .data-contacto{
-        width: 100%;
-        min-height: 20%;
-        padding: 2%;
-    }
-
-    .contacto{
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255,255,255, 0.6);
-        -ms-transform: none; /* IE 9 */
-        -webkit-transform: none; /* Safari */
-        transform: none;
-    }
-
-    .contacto p{
-        color: #000;
-    }
-
-    .contacto .redes-sociales{
-        width: 23%;
-        margin: 3% 0% 0 0%;
-    }
-
-    .form-contacto{
-        width: 100%;
-    }
-
+    /* Servicios */
     .services-bussines{
         padding: 0 2%;
-        min-height: 250px;
         margin: 2% 0;
     }
 
-    .services-bussines .text-services-bussines, .services-bussines .img-services-bussines{
-        float: none;
-    }
-
-    .services-bussines .img-services-bussines{
-        width: 150px;
-        height: 120px;
-        margin: 0% auto;
-    }
-
-    .services-bussines .text-services-bussines{
-        width: 100%;
-        height: 55%;
-        margin: 2% 0;
-    }
-
-    .services-bussines .text-services-bussines h2{
-        font-size: 15px;
-    }
-
-    .services-bussines .text-services-bussines p{
-        font-size: 13px;
-    }
-
-    .services-bussines .text-services-bussines ul{
-        font-size: 12px;
-        margin-left: 3%;
-    }
-
-    .text-separation-left{
-        padding-left: 0%;
-    }
-
-    .text-separation-right{
-        padding-right: 0%;
-    }
-
-    .portafolio{
-        height: 400px;
-        padding: 2%;
-    }
-
-    .portafolio .proyect{
-        width: 48%;
-        height: 40%;
-    }
-
+    /* Portafolio */
     .portafolio .proyect .button-proyect{
         width: 60%;
         height: 20%;
@@ -921,44 +839,133 @@ body.nav-open .nav-small{
         margin: 0 auto;
     }
 
+    /* Contacto */
+    .contacto{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255, 0.6);
+        -ms-transform: none; /* IE 9 */
+        -webkit-transform: none; /* Safari */
+        transform: none;
+    }
+    .contacto p{
+        color: #000;
+    }
+    .contacto .redes-sociales{
+        width: 23%;
+        margin: 3% 0% 0 0%;
+    }
+    .form-contacto{
+        width: 100%;
+    }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 479px) and (min-width: 320px) {
+    /* Headers */
+    .header-big, .header-contacto{
+        height: 40vh;
+    }
+
+    /* Icons Services Softi */
+    .services{
+        width: 50%;
+        height: 50%;
+    }
+    .services .legend-services{
+        line-height: 18px;
+        font-size: 12px;
+    }
+
+    /* Herramientas de desarrollo */
+    .sub-header{
+        height: 40px;
+        padding: 2%;
+    }
+    .desarrollo-web1, .desarrollo-web2{
+        overflow: hidden;
+        margin-right: 0;
+    }
+    .desarrollo-web1{
+        width: 15%;
+    }
+
+    /* Servicios */
+    .services-bussines{
+        min-height: 250px;
+    }
+    .services-bussines .text-services-bussines, .services-bussines .img-services-bussines{
+        float: none;
+    }
+    .services-bussines .img-services-bussines{
+        width: 150px;
+        height: 120px;
+        margin: 0% auto;
+    }
+    .services-bussines .text-services-bussines{
+        width: 100%;
+        height: 55%;
+        margin: 2% 0;
+    }
+    .services-bussines .text-services-bussines h2{
+        font-size: 15px;
+    }
+    .services-bussines .text-services-bussines p{
+        font-size: 13px;
+    }
+    .services-bussines .text-services-bussines ul{
+        font-size: 12px;
+        margin-left: 3%;
+    }
+    .text-separation-left{
+        padding-left: 0%;
+    }
+    .text-separation-right{
+        padding-right: 0%;
+    }
+
+    /* Portafolio */
+
+    .portafolio{
+        height: 400px;
+        padding: 2%;
+    }
+    .portafolio .proyect{
+        width: 48%;
+        height: 40%;
+    }
     .data-portafolio{
         width: 100%;
     }
-
     .close-mostrar-portafolio{
         display: block;
     }
-
     .desc-proyecto p{
         font-size: 14px;
         text-align: center;
     }
-
     .desc-proyecto ul{
         font-size: 14px;
         padding-left: 10%;
     }
 
+    /* Footer */
     footer{
         height: 330px;
         padding: 2%;
     }
-
     footer .partial-footer{
       width: 100%;
     }
-
     footer .partial-footer:first-child{
         height: 42%;
     }
-
     footer .partial-footer{
         height: 23%;
     }
     footer .partial-footer:last-child{
         height: 35%;
     }
-
     footer .partial-footer h3{
         margin-bottom: 0px;
     }
@@ -975,3 +982,103 @@ body.nav-open .nav-small{
     footer .partial-footer .logo-footer{
         width: 20%;
     }
+
+    /* Contacto */
+    .data-contacto{
+        width: 100%;
+        min-height: 20%;
+        padding: 2%;
+    }
+}
+
+/* Mobile Landscape */
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+    /* Headers */
+    .header-big, .header-contacto{
+        height: 100vh;
+    }
+
+    /* Icons Services Softi */
+    .services{
+        width: 40%;
+        height: 40%;
+    }
+    .services .legend-services{
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    /* Herramientas de desarrollo */
+    .sub-header{
+        height: 60px;
+        padding: 2%;
+    }
+    .desarrollo-web1, .desarrollo-web2{
+        overflow: hidden;
+        margin-right: 1%;
+    }
+    .desarrollo-web1{
+        width: 14%;
+    }
+
+    /* Servicios */
+    .services-bussines{
+        min-height: 150px;
+    }
+    .services-bussines .img-services-bussines{
+        width: 170px;
+        height: 170px;
+        margin: 3% auto;
+    }
+    .services-bussines .text-services-bussines{
+        width: 70%;
+        margin: 2% 0;
+    }
+    .services-bussines .text-services-bussines h2{
+        font-size: 18px;
+    }
+    .services-bussines .text-services-bussines p{
+        font-size: 15px;
+    }
+    .services-bussines .text-services-bussines ul{
+        font-size: 15px;
+        margin-left: 3%;
+    }
+    .text-separation-left{
+        padding-left: 2%;
+    }
+    .text-separation-right{
+        padding-right: 2%;
+    }
+
+    /* Portafolio */
+    .portafolio{
+        height: 250px;
+        padding: 2%;
+    }
+    .data-portafolio{
+        width: 70%;
+    }
+
+    /* Footer */
+    footer{
+        height: 300px;
+        padding: 2%;
+    }
+    footer .partial-footer{
+      width: 49%;
+      height: 50%;
+    }
+    footer .partial-footer .redes-sociales{
+        width: 20%;
+        height: 40%;
+        margin: 0;
+    }
+
+    /* Contacto */
+    .data-contacto{
+        width: 50%;
+        min-height: 20%;
+        padding: 2%;
+    }
+}
