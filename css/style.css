@@ -724,6 +724,7 @@ footer .partial-footer .logo-footer{
     top: 0;
     right: 0;
     bottom: 0;
+    width: 0;
     background: #171D3A;
     -webkit-transition: -webkit-transform 0.3s ease;
             transition: transform 0.3s ease;
