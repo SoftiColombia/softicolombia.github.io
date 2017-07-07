@@ -112,7 +112,7 @@ hr{
 }
 
 .button-small{
-    width: 35%;
+    width: 40%;
     height: 35px;
     border-radius: 2px;
     border-style: double;
@@ -347,13 +347,13 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 
 .services{
     width: 25%;
-    height: 35%;
+    height: 30%;
     text-align: center;
 }
 
 .services .header-services{
     width: 100%;
-    height: 80%;
+    height: 75%;
 }
 
 .services .header-services .img-services{
@@ -384,7 +384,7 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
     line-height: 40px;
     color: #fff;
     font-family: Softi-Bolt;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 /* Button move scroll*/
@@ -392,8 +392,8 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 .button-scroll{
     position: absolute;
     display: block;
-    width: 4%;
-    height: 8%;
+    width: 3em;
+    height: 3em;
     bottom: 0;
     right: 0;
     margin: 2%;
@@ -444,7 +444,6 @@ nav .logo-principal, nav .nav-content, .services .header-services .img-services,
 ======================
 
 - Servicios */
-
 .services-bussines{
     position: relative;
     display: block;
@@ -672,7 +671,7 @@ footer{
 }
 footer .partial-footer{
     position: relative;
-    width: 33%;
+    width: 32%;
     height: 100%;
     display: inline-block;
     vertical-align: top;
@@ -686,15 +685,19 @@ footer .partial-footer h3{
 footer .partial-footer p{
     font-size: 18px;
 }
+footer .partial-footer a{
+    color: #171D3A;
+}
 footer .partial-footer .redes-sociales{
     width: 20%;
     height: 60%;
     display: inline-block;
     vertical-align: top;
-    margin: 2%;
+    margin: 1%;
 }
 footer .partial-footer .logo-footer{
     width: 30%;
+    margin: 5% 0;
 }
 
 /* Nav - Smarphones*/
@@ -888,7 +891,7 @@ Config global smartphones */
         margin-right: 0;
     }
     .desarrollo-web1{
-        width: 15%;
+        width: 14.5%;
     }
 
     /* Servicios */
@@ -1027,12 +1030,12 @@ Config global smartphones */
         min-height: 150px;
     }
     .services-bussines .img-services-bussines{
-        width: 170px;
-        height: 170px;
+        width: 160px;
+        height: 160px;
         margin: 3% auto;
     }
     .services-bussines .text-services-bussines{
-        width: 70%;
+        width: 65%;
         margin: 2% 0;
     }
     .services-bussines .text-services-bussines h2{
