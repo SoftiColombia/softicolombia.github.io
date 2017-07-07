@@ -779,6 +779,42 @@ Config global smartphones */
     nav{
         padding: 2%;
     }
+
+    /* Button Scroll */
+    .button-scroll{
+        display: none;
+    }
+
+    /* Portafolio */
+    .portafolio .proyect .button-proyect{
+        width: 60%;
+        height: 20%;
+        border: none;
+        z-index: 100;
+        top: 40%;
+        left: 20%;
+        margin: 0 auto;
+    }
+
+    /* Contacto */
+    .contacto{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255, 0.6);
+        -ms-transform: none; /* IE 9 */
+        -webkit-transform: none; /* Safari */
+        transform: none;
+    }
+    .contacto p{
+        color: #000;
+    }
+    .contacto .redes-sociales{
+        width: 23%;
+        margin: 3% 0% 0 0%;
+    }
+    .form-contacto{
+        width: 100%;
+    }
 }
 
 /* Mobile Portrait & Landscape */
@@ -813,11 +849,6 @@ Config global smartphones */
         width: 30%;
     }
 
-    /* Button Scroll */
-    .button-scroll{
-        display: none;
-    }
-
     /* Herramientas de desarrollo */
     .desarrollo-web2{
         width: 5%;
@@ -827,37 +858,6 @@ Config global smartphones */
     .services-bussines{
         padding: 0 2%;
         margin: 2% 0;
-    }
-
-    /* Portafolio */
-    .portafolio .proyect .button-proyect{
-        width: 60%;
-        height: 20%;
-        border: none;
-        z-index: 100;
-        top: 40%;
-        left: 20%;
-        margin: 0 auto;
-    }
-
-    /* Contacto */
-    .contacto{
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255,255,255, 0.6);
-        -ms-transform: none; /* IE 9 */
-        -webkit-transform: none; /* Safari */
-        transform: none;
-    }
-    .contacto p{
-        color: #000;
-    }
-    .contacto .redes-sociales{
-        width: 23%;
-        margin: 3% 0% 0 0%;
-    }
-    .form-contacto{
-        width: 100%;
     }
 }
 
@@ -1073,6 +1073,133 @@ Config global smartphones */
     footer .partial-footer .redes-sociales{
         width: 20%;
         height: 40%;
+        margin: 0;
+    }
+
+    /* Contacto */
+    .data-contacto{
+        width: 50%;
+        min-height: 20%;
+        padding: 2%;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 1023px) and (orientation: portrait) {
+    .header-big{
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (orientation: landscape) {
+    .header-big, .header-contacto{
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    /* Headers */
+    .header-contacto{
+        height: 100vh;
+    }
+    .header-big nav, .header-contacto nav, .header-small nav{
+        height: 100px;
+    }
+
+    /* button-menu */
+    .button-menu{
+        width: 50px;
+        height: 50px;
+    }
+    body.nav-open .button-menu, body.nav-open.servicios .button-menu{
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Nav */
+    .nav-small{
+        width: 300px;
+        -webkit-transform: translate3D(300px, 0, 0);
+            -ms-transform: translate3D(300px, 0, 0);
+                transform: translate3D(300px, 0, 0);
+    }
+    body.nav-open .content, body.nav-open .button-menu{
+        -webkit-transform: translate3D(-300px, 0, 0);
+            -ms-transform: translate3D(-300px, 0, 0);
+                transform: translate3D(-300px, 0, 0);
+    }
+    .nav-small ul li{
+        height: 60px;
+    }
+    .nav-small ul li a{
+        line-height: 60px;
+    }
+
+    /* Icons Services Softi */
+    .partial-header{
+        height: 60%;
+    }
+    .services{
+        width: 50%;
+        height: 60%;
+    }
+    .services .legend-services{
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    /* Herramientas de desarrollo */
+    .sub-header{
+        height: 80px;
+        padding: 2%;
+    }
+    .desarrollo-web1, .desarrollo-web2{
+        overflow: hidden;
+        margin-right: 1%;
+    }
+    .desarrollo-web1{
+        width: 14%;
+    }
+    .desarrollo-web2{
+        width: 6%;
+    }
+
+    /* Servicios */
+    .services-bussines{
+        padding: 2%;
+    }
+    .services-bussines .text-services-bussines ul{
+        font-size: 20px;
+        margin-left: 3%;
+    }
+    .text-separation-left{
+        padding-left: 2%;
+    }
+    .text-separation-right{
+        padding-right: 2%;
+    }
+
+    /* Portafolio */
+    .portafolio{
+        height: 300px;
+        padding: 2% 0%;
+    }
+    .data-portafolio{
+        width: 70%;
+    }
+
+    /* Footer */
+    footer{
+        height: 300px;
+        padding: 2%;
+    }
+    footer .partial-footer{
+      width: 49%;
+      height: 50%;
+    }
+    footer .partial-footer .redes-sociales{
+        width: 15%;
+        height: 48%;
         margin: 0;
     }
 
