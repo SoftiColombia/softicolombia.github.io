@@ -69,27 +69,27 @@
                         <p><img class="icon" src="assets/img/email-orange.png" title="Correo" alt="Imagen de correo"/> softicolombia@gmail.com</p>
                         <p><img class="icon" src="assets/img/phone-orange.png" title="Teléfono" alt="Imagen de teléfono"/> 350 895 7850 - 310 372 0253</p>
 
-                        <a href="https://www.facebook.com/Softicol-1885681091692802/?ref=aymt_homepage_panel" target="_blank"><img class="redes-sociales" src="assets/img/facebook-orange.png"/></a>
-                        <a href="https://twitter.com/softicol" target="_blank"><img class="redes-sociales" src="assets/img/twitter-orange.png"/></a>
-                        <a href="https://www.instagram.com/softicol/" target="_blank"><img class="redes-sociales" src="assets/img/instagram-orange.png"/></a>
+                        <a href="https://www.facebook.com/Softicol-1885681091692802/?ref=aymt_homepage_panel" target="_blank"><img class="redes-sociales" src="assets/img/facebook.png" alt="Icon facebook"/></a>
+                        <a href="https://twitter.com/softicol" target="_blank"><img class="redes-sociales" src="assets/img/twitter.png" alt="Icon twitter"/></a>
+                        <a href="https://www.instagram.com/softicol/" target="_blank"><img class="redes-sociales" src="assets/img/instagram.png" alt="Icon instagram"/></a>
                     </div>
                 </div>
                 <div class="data-contacto">
                     <form class="form-contacto" action="#" method="post">
                         <h2>Contáctanos</h2>
                         <p>Nombre(s):</p>
-                        <input type="text" name="nombres" id="nombres" required placeholder="Ej: Juan Peréz"/>
+                        <input type="text" name="nombre" id="nombre" required placeholder="Ej: Juan Peréz"/>
                         <p>Télefono:</p>
                         <input type="number" name="telefono" id="telefono" required placeholder="Ej: 3133133134"/>
                         <p>Correo:</p>
-                        <input type="text" name="correo" id="correo" required placeholder="Ej: juanperez@gmail.com"/>
+                        <input type="email" name="correo" id="correo" required placeholder="Ej: juanperez@gmail.com"/>
                         <p>Asunto:</p>
-                        <select name="correo" id="correo" required>
-                            <option disabled>Seleccione...</option>
-                            <option>Solicitud</option>
-                            <option>Queja/Reclamo</option>
-                            <option>Felicitación</option>
-                            <option>Sugerencia</option>
+                        <select name="asunto" id="asunto" required>
+                            <option disabled value="null">Seleccione...</option>
+                            <option value="solicitud">Solicitud</option>
+                            <option value="queja/reclamo">Queja/Reclamo</option>
+                            <option value="felicitacion">Felicitación</option>
+                            <option value="sugerencia">Sugerencia</option>
                         </select>
                         <p>Mensaje:</p>
                         <textarea name="mensaje" id="mensaje" maxlength="500" required placeholder="Tu mensaje aquí..."></textarea>
