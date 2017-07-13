@@ -69,18 +69,74 @@ $(document).ready(function () {
         $(".desc-proyecto ul").html(trabajo);
     });
 
-    $(".mostrar-portafolio").click(function(){
-        $(".mostrar-portafolio").addClass("hide");
-        $("body").css("overflow-y", "auto");
-    });
-
-    $(".close-mostrar-portafolio").click(function(){
+    $(".mostrar-portafolio, .close-mostrar-portafolio").click(function(){
         $(".mostrar-portafolio").addClass("hide");
         $("body").css("overflow-y", "auto");
     });
 
     $(".data-portafolio").click(false);
+
+    var enviado = gup("enviado");
+    if(enviado != null){
+        $(".mostrar-mensaje").removeClass("hide");
+        if(enviado == "true"){
+            msg = "Su novedad fue enviada exitosamente, se le respondera lo más pronto posible por medio de e-mail o por su número telefonico.";
+            img = "fine";
+        }else{
+            msg = "Hubo un error, por favor intente nuevamente o utilize otro medio para comunicarse con nosotros.";
+            img = "error";
+        }
+        $(".icon-status").css({"background-image": "url(assets/img/"+img+".png)", "background-size": "100% 100%"});
+        $(".mensaje-contacto p").html(msg);
+    }
+    $(".exit-mensaje").click(function(){
+        $(".mostrar-mensaje").addClass("hide");
+    });
+    // $(".button-form-contacto").click(function(e){
+    //     $(".button-form-contacto").attr("disabled", true);
+    //     $.ajax({
+    //         type: "GET",
+    //         url: "http://softicol.eshost.com.ar/index.php",
+    //         data: {
+    //                 nombre: $("#nombre").val(),
+    //                 telefono: $("#telefono").val(),
+    //                 correo: $("#correo").val(),
+    //                 asunto : $("#asunto").val(),
+    //                 mensaje : $("#mensaje").val()
+    //             },
+    //         dataType: "jsonp",
+    //         jsonpCallback: "emailStatus"
+    //     });
+    // });
 });
+
+// function emailStatus(data){
+//     var msg, img;
+//     $(".mostrar-mensaje").removeClass("hide");
+//     if(data){
+//         msg = "Su novedad fue enviada exitosamente, se le respondera lo más pronto posible por medio de e-mail o por su número telefonico.";
+//         img = "fine";
+//     }else{
+//         msg = "Hubo un error, por favor intente nuevamente o utilize otro medio para comunicarse con nosotros.";
+//         img = "error";
+//     }
+//     $(".icon-status").css({"background-image": "url(assets/img/"+img+".png)", "background-size": "100% 100%"});
+//     $(".mensaje-contacto p").html(msg);
+//
+//     $(".form-contacto")[0].reset();
+//     $(".button-form-contacto").attr("disabled", false);
+// }
+
+function gup(name){
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp (regexS);
+    var tmpURL = window.location.href;
+    var results = regex.exec(tmpURL);
+    if(results == null)
+        return null;
+    else
+        return results[1];
+}
 
 function moveScroll($top_scroll, $seg) {
     $('body, html').animate({

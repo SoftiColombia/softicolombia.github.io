@@ -311,6 +311,54 @@ nav ul li:hover .line-menu{
     -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
 }
+.content-mensaje{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+}
+.mensaje-contacto{
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 20px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.mensaje-contacto .exit-mensaje{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    background: url("../assets/img/exit.png") transparent;
+    background-size: 100% 100%;
+    border: none;
+    outline: none;
+    -moz-outline: none;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+.mensaje-contacto .exit-mensaje:hover{
+    opacity: 1;
+}
+.mensaje-contacto .icon-status, .mensaje-contacto h3{
+    display: inline-block;
+    vertical-align: top;
+}
+.mensaje-contacto .icon-status{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.mensaje-contacto p{
+    text-align: justify;
+    margin-top: 10px;
+}
 
 /* Icons Services Softi */
 .content-services{
@@ -503,7 +551,7 @@ article .img-article img{
     z-index: 3000;
     width: 30px;
     height: 30px;
-    background: url("../assets/img/icon-close.png") no-repeat;
+    background: url("../assets/img/exit.png") no-repeat;
     background-size: cover;
     margin: 1%;
     border: none;
@@ -942,12 +990,15 @@ Config global smartphones */
         min-height: 20%;
         padding: 2%;
     }
+    .content-mensaje{
+        width: 100%;
+    }
 }
 
 /* Mobile Landscape */
 @media only screen and (max-width: 767px) and (min-width: 480px) {
     /* Headers */
-    .header-big, .header-contacto{
+    .header-principal{
         height: 100vh;
     }
     /* Herramientas de desarrollo */
@@ -1005,6 +1056,9 @@ Config global smartphones */
         min-height: 20%;
         padding: 2%;
     }
+    .content-mensaje{
+        width:70%;
+    }
 }
 
 /* Tablet */
@@ -1025,7 +1079,7 @@ Config global smartphones */
     .header-principal{
         height: 100vh;
     }
-    .header-big nav, .header-contacto nav, .header-small nav{
+    .header-principal nav, .header-second nav{
         height: 100px;
     }
 
@@ -1112,6 +1166,9 @@ Config global smartphones */
         width: 50%;
         min-height: 20%;
         padding: 2%;
+    }
+    .content-mensaje{
+        width: 60%;
     }
 }
 @media only screen and (min-width: 1600px){

@@ -74,10 +74,10 @@
                     </div>
                 </div>
                 <div class="data-contacto">
-                    <form class="form-contacto" action="#" method="post">
+                    <form class="form-contacto" action="http://www.softicol.eshost.com.ar/index.php" method="POST" enctype="multipart/form-data">
                         <h2>Contáctanos</h2>
                         <p>Nombre(s):</p>
-                        <input type="text" name="nombre" id="nombre" required placeholder="Ej: Juan Peréz"/>
+                        <input type="text" name="nombre" id="nombre" required="required" placeholder="Ej: Juan Peréz"/>
                         <p>Télefono:</p>
                         <input type="number" name="telefono" id="telefono" required placeholder="Ej: 3133133134"/>
                         <p>Correo:</p>
@@ -93,10 +93,19 @@
                         <p>Mensaje:</p>
                         <textarea name="mensaje" id="mensaje" maxlength="500" required placeholder="Tu mensaje aquí..."></textarea>
                         <label>* Todos los campos son obligatorios</label><br>
-                        <button class="button-small  orange button-form-contacto">Enviar</button>
+                        <button class="button-small orange button-form-contacto">Enviar</button>
                     </form>
                 </div>
             </header>
+            <div class="background-fixed hide mostrar-mensaje borde-difuminado">
+                <div class="content-mensaje">
+                    <div class="mensaje-contacto">
+                        <button class="exit-mensaje"></button>
+                        <div class="icon-status"></div><h3>Mensaje: </h3>
+                        <p></p><!-- Respuesta del servidor -->
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Script -->
