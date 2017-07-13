@@ -414,13 +414,15 @@ nav ul li:hover .line-menu{
     display: block;
     width: 3em;
     height: 3em;
-    bottom: 0;
+    top: 0;
     right: 0;
     margin: 2%;
     border-radius: 2px;
     border-style: none;
     background: white url("../assets/img/scroll-button.png");
-    background-size: 100% 100%;
+    background-size: 70% 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
     transition: background-color 1s;
 }
 
